@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop - Kidani Mabati</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <style>
@@ -21,10 +19,6 @@ body{
 
 header{
     margin-bottom:40px;
-}
-
-h1, h2{
-    margin-bottom:10px;
 }
 
 .form-container{
@@ -113,7 +107,7 @@ h1, h2{
 <a href="index.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back to Home</a>
 
 <script>
-// Get product name from URL query
+// Get product name from URL
 const params = new URLSearchParams(window.location.search);
 const productName = params.get('product') || "Product";
 document.getElementById('product-name').textContent = productName;
