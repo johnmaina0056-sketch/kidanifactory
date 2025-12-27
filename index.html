@@ -3,24 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kidani Mabati</title>
+<title>Shop - Kidani Mabati</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <style>
-body {
+body{
     font-family: 'Poppins', sans-serif;
     background:#f5f5f5;
     margin:0;
     padding:20px;
+    text-align:center;
 }
 
 header{
-    text-align:center;
     margin-bottom:40px;
 }
 
@@ -28,63 +27,13 @@ h1, h2{
     margin-bottom:10px;
 }
 
-section{
-    margin-bottom:40px;
-    text-align:center;
-}
-
-img{
-    max-width:200px;
-    border-radius:10px;
-}
-
-.box-heading{
-    background:#1f6feb;
-    color:#fff;
-    padding:16px 20px;
-    font-size:26px;
-    font-weight:700;
-    text-align:center;
-    letter-spacing:2px;
-    border-radius:10px;
-    margin-bottom:20px;
-}
-
-.order-btn, .shop-btn{
-    display:inline-block;
-    margin:12px 8px 0 0;
-    background:#000;
-    color:#fff;
-    padding:12px 28px;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    font-size:17px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.4);
-    transition:0.25s ease;
-    cursor:pointer;
-}
-.order-btn:hover, .shop-btn:hover{
-    background:#111;
-    transform:scale(1.06);
-}
-.shop-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-}
-
-/* FORM STYLES */
 .form-container{
-    display:none;
-    margin-top:20px;
     background:#fff;
     padding:20px;
     border-radius:10px;
     box-shadow:0 4px 14px rgba(0,0,0,0.2);
     max-width:500px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:auto;
     text-align:left;
 }
 
@@ -123,130 +72,67 @@ img{
     background:#1da851;
 }
 
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#000;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+    transition:0.25s ease;
+}
+.back-btn:hover{
+    background:#111;
+    transform:scale(1.05);
+}
 </style>
 </head>
-
 <body>
 
 <header>
     <h1>Kidani Mabati</h1>
-    <p>Premium Roofing Solutions</p>
+    <p>Fill the form below to submit your inquiry</p>
 </header>
 
-<!-- PRODUCT TEMPLATE -->
-<section>
-    <div class="box-heading">Simba Cement 42.5N</div>
-    <img src="simba 1.jfif" alt="Simba Cement 42.5N">
-    <br>
-    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
-    <button class="shop-btn" onclick="toggleForm(this, 'Simba Cement 42.5N')"><i class='bx bx-box'></i> SHOP NOW</button>
+<div class="form-container">
+    <h2>Inquiry for <span id="product-name">PRODUCT</span></h2>
+    <form id="inquiry-form">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+        <label>Project Details / Message</label>
+        <textarea name="message" rows="5" required></textarea>
+        <button type="submit">SUBMIT INQUIRY</button>
+    </form>
+</div>
 
-    <div class="form-container">
-        <h3>Inquiry for <span class="product-name"></span></h3>
-        <form onsubmit="submitForm(event, this)">
-            <label>Full Name</label>
-            <input type="text" name="name" required>
-            <label>Email Address</label>
-            <input type="email" name="email" required>
-            <label>Project Details / Message</label>
-            <textarea name="message" rows="4" required></textarea>
-            <button type="submit">SUBMIT INQUIRY</button>
-        </form>
-    </div>
-</section>
-
-<section>
-    <div class="box-heading">Simba Cement 32.5R</div>
-    <img src="simba 2.jfif" alt="Simba Cement 32.5R">
-    <br>
-    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
-    <button class="shop-btn" onclick="toggleForm(this, 'Simba Cement 32.5R')"><i class='bx bx-box'></i> SHOP NOW</button>
-
-    <div class="form-container">
-        <h3>Inquiry for <span class="product-name"></span></h3>
-        <form onsubmit="submitForm(event, this)">
-            <label>Full Name</label>
-            <input type="text" name="name" required>
-            <label>Email Address</label>
-            <input type="email" name="email" required>
-            <label>Project Details / Message</label>
-            <textarea name="message" rows="4" required></textarea>
-            <button type="submit">SUBMIT INQUIRY</button>
-        </form>
-    </div>
-</section>
-
-<section>
-    <div class="box-heading">BOX PROFILE</div>
-    <img src="images/m1.jfif" alt="Box Profile 1">
-    <br>
-    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
-    <button class="shop-btn" onclick="toggleForm(this, 'Box Profile 1')"><i class='bx bx-box'></i> SHOP NOW</button>
-
-    <div class="form-container">
-        <h3>Inquiry for <span class="product-name"></span></h3>
-        <form onsubmit="submitForm(event, this)">
-            <label>Full Name</label>
-            <input type="text" name="name" required>
-            <label>Email Address</label>
-            <input type="email" name="email" required>
-            <label>Project Details / Message</label>
-            <textarea name="message" rows="4" required></textarea>
-            <button type="submit">SUBMIT INQUIRY</button>
-        </form>
-    </div>
-</section>
-
-<!-- CORRUGATED -->
-<section>
-    <div class="box-heading">CORRUGATED COLOURED MABATI</div>
-    <img src="conrruagated mabati/c2.jfif" alt="Corrugated 1">
-    <br>
-    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
-    <button class="shop-btn" onclick="toggleForm(this, 'Corrugated 1')"><i class='bx bx-box'></i> SHOP NOW</button>
-
-    <div class="form-container">
-        <h3>Inquiry for <span class="product-name"></span></h3>
-        <form onsubmit="submitForm(event, this)">
-            <label>Full Name</label>
-            <input type="text" name="name" required>
-            <label>Email Address</label>
-            <input type="email" name="email" required>
-            <label>Project Details / Message</label>
-            <textarea name="message" rows="4" required></textarea>
-            <button type="submit">SUBMIT INQUIRY</button>
-        </form>
-    </div>
-</section>
-
-<!-- Add more products as needed -->
+<a href="index.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back to Home</a>
 
 <script>
-// Show/hide form under the clicked product
-function toggleForm(button, productName){
-    const section = button.parentElement;
-    const formContainer = section.querySelector('.form-container');
-    formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block';
-    formContainer.querySelector('.product-name').textContent = productName;
-}
+// Get product name from URL query
+const params = new URLSearchParams(window.location.search);
+const productName = params.get('product') || "Product";
+document.getElementById('product-name').textContent = productName;
 
-// Submit form to WhatsApp
-function submitForm(e, form){
+// Handle form submission to WhatsApp
+document.getElementById('inquiry-form').addEventListener('submit', function(e){
     e.preventDefault();
 
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
-    const product = form.closest('.form-container').querySelector('.product-name').textContent;
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
 
     const waNumber = "254789997208";
-    const text = `Hello, I have a project inquiry for ${product}:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const text = `Hello, I have a project inquiry for ${productName}:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     const url = `https://wa.me/${waNumber}?text=${text}`;
-
+    
     window.open(url, "_blank");
-
-    form.reset();
-}
+    this.reset();
+});
 </script>
 
 </body>
