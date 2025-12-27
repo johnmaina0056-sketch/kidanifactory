@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Inquiry - Kidani Mabati</title>
+<title>Kidani Mabati</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <style>
 body{
@@ -14,24 +17,72 @@ body{
     background:#f5f5f5;
     padding:20px;
 }
-.container{
-    max-width:600px;
-    margin:auto;
-    background:#fff;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.2);
-}
-h2{
+
+section{
+    margin-bottom:40px;
     text-align:center;
+}
+
+img{
+    max-width:200px;
+    border-radius:10px;
+}
+
+.box-heading{
+    background:#1f6feb;
+    color:#fff;
+    padding:16px 20px;
+    font-size:26px;
+    font-weight:700;
+    text-align:center;
+    letter-spacing:2px;
+    border-radius:10px;
     margin-bottom:20px;
 }
-form label{
+
+.order-btn, .shop-btn{
+    display:inline-block;
+    margin:12px 8px 0 0;
+    background:#000;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:17px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+    transition:0.25s ease;
+    cursor:pointer;
+}
+.order-btn:hover, .shop-btn:hover{
+    background:#111;
+    transform:scale(1.06);
+}
+.shop-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* FORM STYLES */
+.form-container{
+    display:none;
+    margin-top:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.2);
+    max-width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+.form-container label{
     display:block;
-    margin-top:15px;
+    margin-top:10px;
     font-weight:600;
 }
-form input, form textarea{
+.form-container input, .form-container textarea{
     width:100%;
     padding:10px;
     margin-top:5px;
@@ -39,22 +90,22 @@ form input, form textarea{
     border:1px solid #ccc;
     font-size:16px;
 }
-form textarea{
+.form-container textarea{
     resize:none;
 }
-button{
-    margin-top:20px;
+.form-container button{
+    margin-top:15px;
     width:100%;
     background:#25D366;
     color:#fff;
-    padding:14px;
-    font-size:18px;
+    padding:12px;
+    font-size:16px;
     font-weight:700;
     border:none;
     border-radius:10px;
     cursor:pointer;
 }
-button:hover{
+.form-container button:hover{
     background:#1da851;
 }
 </style>
@@ -62,39 +113,124 @@ button:hover{
 
 <body>
 
-<div class="container">
-    <h2>Submit Your Project Inquiry</h2>
-    <form id="inquiryForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
+<header style="text-align:center; margin-bottom:40px;">
+    <h1>Kidani Mabati</h1>
+    <p>Premium Roofing Solutions</p>
+</header>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" required>
+<!-- PRODUCT TEMPLATE -->
+<section>
+    <div class="box-heading">Simba Cement 42.5N</div>
+    <img src="simba 1.jfif" alt="Simba Cement 42.5N">
+    <br>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <button class="shop-btn" onclick="showForm(this, 'Simba Cement 42.5N')"><i class='bx bx-box'></i> SHOP NOW</button>
 
-        <label for="message">Project Details / Message</label>
-        <textarea id="message" rows="5" required></textarea>
+    <div class="form-container">
+        <h3>Inquiry for <span class="product-name"></span></h3>
+        <form onsubmit="submitForm(event, this)">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            <label>Project Details / Message</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">SUBMIT INQUIRY</button>
+        </form>
+    </div>
+</section>
 
-        <button type="submit">SUBMIT INQUIRY</button>
-    </form>
-</div>
+<section>
+    <div class="box-heading">Simba Cement 32.5R</div>
+    <img src="simba 2.jfif" alt="Simba Cement 32.5R">
+    <br>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <button class="shop-btn" onclick="showForm(this, 'Simba Cement 32.5R')"><i class='bx bx-box'></i> SHOP NOW</button>
+
+    <div class="form-container">
+        <h3>Inquiry for <span class="product-name"></span></h3>
+        <form onsubmit="submitForm(event, this)">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            <label>Project Details / Message</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">SUBMIT INQUIRY</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <div class="box-heading">BOX PROFILE</div>
+    <img src="images/m1.jfif" alt="Box Profile 1">
+    <br>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <button class="shop-btn" onclick="showForm(this, 'Box Profile 1')"><i class='bx bx-box'></i> SHOP NOW</button>
+
+    <div class="form-container">
+        <h3>Inquiry for <span class="product-name"></span></h3>
+        <form onsubmit="submitForm(event, this)">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            <label>Project Details / Message</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">SUBMIT INQUIRY</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <div class="box-heading">CORRUGATED COLOURED MABATI</div>
+    <img src="conrruagated mabati/c2.jfif" alt="Corrugated 1">
+    <br>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <button class="shop-btn" onclick="showForm(this, 'Corrugated 1')"><i class='bx bx-box'></i> SHOP NOW</button>
+
+    <div class="form-container">
+        <h3>Inquiry for <span class="product-name"></span></h3>
+        <form onsubmit="submitForm(event, this)">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            <label>Project Details / Message</label>
+            <textarea name="message" rows="4" required></textarea>
+            <button type="submit">SUBMIT INQUIRY</button>
+        </form>
+    </div>
+</section>
+
+<!-- Add more products as needed -->
 
 <script>
-document.getElementById('inquiryForm').addEventListener('submit', function(e){
+function showForm(button, productName){
+    const section = button.parentElement;
+    const formContainer = section.querySelector('.form-container');
+    formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block';
+    formContainer.querySelector('.product-name').textContent = productName;
+}
+
+function submitForm(e, form){
     e.preventDefault();
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+    const product = form.closest('.form-container').querySelector('.product-name').textContent;
 
-    // Create WhatsApp message
     const waNumber = "254789997208";
-    const text = `Hello, I have a project inquiry:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const text = `Hello, I have a project inquiry for ${product}:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     const url = `https://wa.me/${waNumber}?text=${text}`;
 
-    // Open WhatsApp
     window.open(url, "_blank");
-});
+
+    // Optionally hide form after submission
+    form.closest('.form-container').style.display = 'none';
+    form.reset();
+}
 </script>
 
 </body>
