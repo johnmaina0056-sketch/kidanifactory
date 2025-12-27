@@ -34,7 +34,7 @@
     transform: scale(1.06);
 }
 
-/* ALL SECTION TITLES (EXCEPT HEADER) */
+/* SECTION TITLES */
 .box-heading,
 .images-heading,
 .images-heading2,
@@ -48,10 +48,54 @@
     letter-spacing: 2px;
     border-radius: 10px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* FLOATING CALL & WHATSAPP */
+/* HERO BUTTONS (DEFAULT THEMES) */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+    background: #25D366;
+}
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+
+/* Call */
+.call-btn {
+    background: #000;
+}
+.call-btn:hover {
+    background: #111;
+}
+
+/* Email */
+.email-btn {
+    background: #1f6feb;
+}
+.email-btn:hover {
+    background: #1a5fd0;
+}
+
+/* FLOATING BUTTONS */
 .floating-contact {
     position: fixed;
     bottom: 20px;
@@ -61,7 +105,6 @@
     gap: 12px;
     z-index: 9999;
 }
-
 .floating-contact a {
     width: 55px;
     height: 55px;
@@ -72,42 +115,14 @@
     color: #fff;
     font-size: 26px;
     text-decoration: none;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-    transition: transform 0.25s ease;
 }
-
-.floating-contact a:hover {
-    transform: scale(1.1);
-}
-
-.floating-contact .whatsapp {
-    background: #25D366;
-}
-
-.floating-contact .call {
-    background: #000;
-}
+.floating-contact .whatsapp { background:#25D366; }
+.floating-contact .call { background:#000; }
 
 </style>
 </head>
 
 <body>
-
-<div class="sidebar" id="sidebar">
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#gallery">Box Profile</a>
-    <a href="#images">Images</a>
-    <a href="#images2">Images 2</a>
-    <a href="#images3">Images 3</a>
-    <a href="#images4">Premium Sheets</a>
-    <a href="#images5">Installation Gallery</a>
-    <a href="#images6">Roofing Nails</a>
-</div>
-
-<button class="menu-btn" onclick="toggleSidebar()">☰</button>
-
-<div class="content" id="content">
 
 <header>
     <div class="logo">Kidani <span>Mabati</span></div>
@@ -116,151 +131,24 @@
 <section id="home" class="hero">
     <div class="hero-text">
         <h1>Premium Roofing Solutions</h1>
-        <p>Kidani Mabati provides durable, affordable, and high-quality roofing sheets.</p>
+        <p>Kidani Mabati provides durable, affordable, and high-quality roofing sheets for homes, schools, and businesses.</p>
+
+        <!-- RESTORED HERO BUTTONS -->
+        <div class="hero-buttons">
+            <a class="hero-btn whatsapp-btn" href="https://wa.me/254789997208">
+                <i class='bx bxl-whatsapp'></i> WhatsApp Kidani Now
+            </a>
+
+            <a class="hero-btn call-btn" href="tel:0789997208">
+                <i class='bx bx-phone-call'></i> Call Kidani Now
+            </a>
+
+            <a class="hero-btn email-btn" href="mailto:kidanifactory@gmail.com">
+                <i class='bx bx-envelope'></i> Email Kidani Now
+            </a>
+        </div>
     </div>
 </section>
-
-<!-- BOX PROFILE -->
-<section id="gallery" class="gallery">
-    <div class="box-heading">BOX PROFILE</div>
-    <div class="gallery-grid">
-
-        <div class="product-card">
-            <ul>
-                <li>Gauge 28 - 500 / Meter</li>
-                <li>Gauge 30 - 440 / Meter</li>
-                <li>Gauge 32 - 400 / Meter</li>
-            </ul>
-        </div>
-
-        <div>
-            <img src="images/m1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="images/m2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- CORRUGATED -->
-<section id="images" class="images-section">
-    <div class="images-heading">CORRUGATED COLOURED MABATI</div>
-    <div class="images-grid">
-
-        <div class="product-card">
-            <ul>
-                <li>Gauge 28 - 400 / Meter</li>
-                <li>Gauge 30 - 350 / Meter</li>
-                <li>Gauge 32 - 300 / Meter</li>
-            </ul>
-        </div>
-
-        <div>
-            <img src="conrruagated mabati/c2.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="conrruagated mabati/c3.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- VERSATILE -->
-<section id="images2" class="images-section2">
-    <div class="images-heading2">VERSATILE MABATI</div>
-    <div class="images-grid">
-
-        <div class="product-card">
-            <ul>
-                <li>Gauge 28 - 600 / Meter</li>
-                <li>Gauge 30 - 550 / Meter</li>
-                <li>Gauge 32 - 520 / Meter</li>
-            </ul>
-        </div>
-
-        <div>
-            <img src="versertile mabati/v1.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="versertile mabati/v2.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- ROMANTILE -->
-<section id="images3" class="images-section3">
-    <div class="images-heading3">ROMANTILE MABATI</div>
-    <div class="images-grid">
-
-        <div class="product-card">
-            <ul>
-                <li>Gauge 28 - 650 / Meter</li>
-                <li>Gauge 30 - 600 / Meter</li>
-                <li>Gauge 32 - 520 / Meter</li>
-            </ul>
-        </div>
-
-        <div>
-            <img src="roman tile/r1.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="roman tile/r2.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- RIDGES -->
-<section id="images4" class="images-section4">
-    <div class="images-heading">RIDGES / VALLEYS</div>
-    <div class="images-grid">
-
-        <div>
-            <img src="riddes/rd1.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="riddes/rd2.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- ROOFING NAILS -->
-<section id="images6" class="images-section6">
-    <div class="images-heading3">ROOFING NAILS</div>
-    <div class="images-grid">
-
-        <div>
-            <img src="nails/n1.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-        <div>
-            <img src="nails/n2.jfif">
-            <a class="order-btn">ORDER NOW</a>
-        </div>
-
-    </div>
-</section>
-
-</div>
 
 <!-- FLOATING BUTTONS -->
 <div class="floating-contact">
@@ -271,13 +159,6 @@
         <i class='bx bx-phone-call'></i>
     </a>
 </div>
-
-<script>
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("open");
-    document.getElementById("content").classList.toggle("shift");
-}
-</script>
 
 </body>
 </html>
