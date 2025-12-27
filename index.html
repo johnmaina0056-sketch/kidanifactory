@@ -3,131 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop - Kidani Mabati</title>
+<title>Kidani Mabati</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+<link href="style.css" rel="stylesheet">
+
 <style>
-body{
-    font-family: 'Poppins', sans-serif;
-    background:#f5f5f5;
-    margin:0;
-    padding:20px;
-    text-align:center;
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:#1f1f1f;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y:auto;
 }
-
-header{
-    margin-bottom:40px;
-}
-
-.form-container{
-    background:#fff;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.2);
-    max-width:500px;
-    margin:auto;
-    text-align:left;
-}
-
-.form-container label{
+.sidebar a {
     display:block;
-    margin-top:10px;
-    font-weight:600;
-}
-
-.form-container input, .form-container textarea{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
-}
-
-.form-container textarea{
-    resize:none;
-}
-
-.form-container button{
-    margin-top:15px;
-    width:100%;
-    background:#25D366;
     color:#fff;
-    padding:12px;
-    font-size:16px;
-    font-weight:700;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+    padding:12px 20px;
+    text-decoration:none;
 }
-.form-container button:hover{
-    background:#1da851;
+.sidebar a:hover {
+    background:#333;
 }
 
-.back-btn{
-    display:inline-block;
-    margin-top:20px;
+/* Content shift */
+.content {
+    margin-left:220px;
+    padding:20px;
+}
+
+/* Menu button */
+.menu-btn {
+    position: fixed;
+    top:20px;
+    left:20px;
     background:#000;
     color:#fff;
-    padding:10px 20px;
-    border-radius:8px;
-    text-decoration:none;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    z-index:999;
+}
+
+/* ORDER NOW BUTTON */
+.order-btn{
+    display:inline-block;
+    margin:12px 8px 0 0;
+    background:#000;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:10px;
     font-weight:700;
+    text-decoration:none;
+    font-size:17px;
     box-shadow:0 4px 14px rgba(0,0,0,0.4);
     transition:0.25s ease;
 }
-.back-btn:hover{
+.order-btn:hover{
     background:#111;
-    transform:scale(1.05);
+    transform:scale(1.06);
+}
+
+/* SHOP NOW BUTTON */
+.shop-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#1f6feb;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:17px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+    transition:0.25s ease;
+}
+.shop-btn:hover{
+    background:#155bb5;
+    transform:scale(1.06);
+}
+
+/* SECTION TITLES */
+.box-heading,
+.images-heading,
+.images-heading2,
+.images-heading3{
+    background:#1f6feb;
+    color:#fff;
+    padding:16px 20px;
+    font-size:26px;
+    font-weight:700;
+    text-align:center;
+    letter-spacing:2px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+}
+.whatsapp-btn{background:#25D366;}
+.call-btn{background:#000;}
+.email-btn{background:#1f6feb;}
+
+/* FLOATING BUTTONS */
+.floating-contact{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:9999;
+}
+.floating-contact a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:26px;
+    text-decoration:none;
+    box-shadow:0 6px 16px rgba(0,0,0,0.4);
+}
+.floating-contact .whatsapp{background:#25D366;}
+.floating-contact .call{background:#000;}
+
+/* PRODUCT IMAGES */
+section img{
+    max-width:250px;
+    border-radius:10px;
+    margin-bottom:10px;
 }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>Kidani Mabati</h1>
-    <p>Fill the form below to submit your inquiry</p>
-</header>
-
-<div class="form-container">
-    <h2>Inquiry for <span id="product-name">PRODUCT</span></h2>
-    <form id="inquiry-form">
-        <label>Full Name</label>
-        <input type="text" name="name" required>
-        <label>Email Address</label>
-        <input type="email" name="email" required>
-        <label>Project Details / Message</label>
-        <textarea name="message" rows="5" required></textarea>
-        <button type="submit">SUBMIT INQUIRY</button>
-    </form>
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Box Profile</a>
+    <a href="#images">Images</a>
+    <a href="#images2">Images 2</a>
+    <a href="#images3">Images 3</a>
+    <a href="#images4">Premium Sheets</a>
+    <a href="#images5">Installation Gallery</a>
+    <a href="#images6">Roofing Nails</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
 </div>
 
-<a href="index.html" class="back-btn"><i class='bx bx-arrow-back'></i> Back to Home</a>
+<button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+<div class="content" id="content">
+
+<header>
+    <div class="logo" style="font-size:30px;font-weight:700;">Kidani <span>Mabati</span></div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero" style="text-align:center;margin-bottom:40px;">
+    <h1>Premium Roofing Solutions</h1>
+    <p>Kidani Mabati provides durable, affordable, and high-quality roofing sheets for homes, schools, and businesses.</p>
+    <div class="hero-buttons">
+        <a class="hero-btn whatsapp-btn" href="https://wa.me/254789997208"><i class='bx bxl-whatsapp'></i> WhatsApp Kidani Now</a>
+        <a class="hero-btn call-btn" href="tel:0789997208"><i class='bx bx-phone-call'></i> Call Kidani Now</a>
+        <a class="hero-btn email-btn" href="mailto:kidanifactory@gmail.com"><i class='bx bx-envelope'></i> Email Kidani Now</a>
+    </div>
+</section>
+
+<!-- PRODUCTS SECTIONS -->
+<section id="products">
+    <div class="box-heading">Simba Cement 42.5N</div>
+    <img src="simba 1.jfif" alt="Simba Cement 42.5N">
+    <ul>
+        <li>Fast setting</li>
+        <li>High durability</li>
+        <li>Weather resistant</li>
+    </ul>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <a class="shop-btn" href="shop.html?product=Simba%2042.5N"><i class='bx bx-box'></i> SHOP NOW</a>
+</section>
+
+<section>
+    <div class="box-heading">Simba Cement 32.5R</div>
+    <img src="simba 2.jfif" alt="Simba Cement 32.5R">
+    <ul>
+        <li>Cost-effective</li>
+        <li>Reliable quality</li>
+        <li>Versatile use</li>
+        <li>High durability</li>
+        <li>Weather resistant</li>
+    </ul>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <a class="shop-btn" href="shop.html?product=Simba%2032.5R"><i class='bx bx-box'></i> SHOP NOW</a>
+</section>
+
+<section id="gallery">
+    <div class="box-heading">BOX PROFILE</div>
+    <img src="images/m1.jfif" alt="Box Profile 1">
+    <img src="images/m2.jfif" alt="Box Profile 2">
+    <ul>
+        <li>Gauge 28 - 500 / Meter</li>
+        <li>Gauge 30 - 440 / Meter</li>
+        <li>Gauge 32 - 400 / Meter</li>
+    </ul>
+    <a class="order-btn" href="https://wa.me/254789997208">WHATSAPP NOW</a>
+    <a class="shop-btn" href="shop.html?product=Box%20Profile"><i class='bx bx-box'></i> SHOP NOW</a>
+</section>
+
+<!-- Add remaining sections for Corrugated, Versatile, Romantile, Rolltop, Nails as per your original HTML -->
+
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-contact">
+    <a href="https://wa.me/254789997208" class="whatsapp"><i class='bx bxl-whatsapp'></i></a>
+    <a href="tel:0789997208" class="call"><i class='bx bx-phone-call'></i></a>
+</div>
 
 <script>
-// Get product name from URL
-const params = new URLSearchParams(window.location.search);
-const productName = params.get('product') || "Product";
-document.getElementById('product-name').textContent = productName;
-
-// Handle form submission to WhatsApp
-document.getElementById('inquiry-form').addEventListener('submit', function(e){
-    e.preventDefault();
-
-    const name = this.name.value;
-    const email = this.email.value;
-    const message = this.message.value;
-
-    const waNumber = "254789997208";
-    const text = `Hello, I have a project inquiry for ${productName}:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-    const url = `https://wa.me/${waNumber}?text=${text}`;
-    
-    window.open(url, "_blank");
-    this.reset();
-});
+function toggleSidebar(){
+    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("content").classList.toggle("shift");
+}
 </script>
+
+<!-- FOOTER -->
+<footer style="background:#222;color:white;padding:40px 20px;margin-top:40px;text-align:center;">
+    <h2>Kidani Mabati</h2>
+    <p><i class='bx bx-map'></i> Eastern Bypass, Nairobi</p>
+    <p><i class='bx bx-phone'></i> 0789997208</p>
+    <p><i class='bx bx-envelope'></i> kidanifactory@gmail.com</p>
+    <p style="opacity:.7;">© 2025 Kidani Mabati. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
