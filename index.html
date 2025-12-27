@@ -8,37 +8,99 @@
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Boxicons CDN -->
+<!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link href="style.css" rel='stylesheet'>
+
+<link href="style.css" rel="stylesheet">
 
 <style>
 
-/* ORDER NOW BUTTON – reduced width */
-.order-btn {
-    display: inline-block;
-    margin: 12px auto 0 auto;
-    background: linear-gradient(90deg, #e63946, #b80c0c);
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 17px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    letter-spacing: 1px;
-    transition: 0.25s ease;
+/* ORDER NOW BUTTON */
+.order-btn{
+    display:inline-block;
+    margin:12px auto 0;
+    background:#000;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:17px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+    transition:0.25s ease;
 }
-.order-btn:hover {
-    transform: scale(1.06);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    opacity: 0.95;
+.order-btn:hover{
+    background:#111;
+    transform:scale(1.06);
 }
+
+/* SECTION TITLES */
+.box-heading,
+.images-heading,
+.images-heading2,
+.images-heading3{
+    background:#000;
+    color:#fff;
+    padding:16px 20px;
+    font-size:26px;
+    font-weight:700;
+    text-align:center;
+    letter-spacing:2px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+}
+.whatsapp-btn{background:#25D366;}
+.call-btn{background:#000;}
+.email-btn{background:#1f6feb;}
+
+/* FLOATING BUTTONS */
+.floating-contact{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:9999;
+}
+.floating-contact a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:26px;
+    text-decoration:none;
+    box-shadow:0 6px 16px rgba(0,0,0,0.4);
+}
+.floating-contact .whatsapp{background:#25D366;}
+.floating-contact .call{background:#000;}
 
 </style>
-
 </head>
+
 <body>
 
 <div class="sidebar" id="sidebar">
@@ -63,49 +125,44 @@
     <div class="logo">Kidani <span>Mabati</span></div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
-    <div class="hero-text">
+    <div class="hero-text" style="text-align:center;">
         <h1>Premium Roofing Solutions</h1>
         <p>Kidani Mabati provides durable, affordable, and high-quality roofing sheets for homes, schools, and businesses.</p>
-        <a class="btn" href="#products">View Products</a>
-    </div>
 
-    <div class="hero-buttons">
-        <a class="hero-btn whatsapp-btn" href="https://wa.me/254789997208">
-            <i class='bx bxl-whatsapp'></i> WhatsApp Kidani Now
-        </a>
-        <a class="hero-btn call-btn" href="tel:0789997208">
-            <i class='bx bx-phone-call'></i> Call Kidani Now
-        </a>
-        <a class="hero-btn email-btn" href="mailto:kidanifactory@gmail.com">
-            <i class='bx bx-envelope'></i> Email Kidani Now
-        </a>
+        <div class="hero-buttons">
+            <a class="hero-btn whatsapp-btn" href="https://wa.me/254789997208">
+                <i class='bx bxl-whatsapp'></i> WhatsApp Kidani Now
+            </a>
+            <a class="hero-btn call-btn" href="tel:0789997208">
+                <i class='bx bx-phone-call'></i> Call Kidani Now
+            </a>
+            <a class="hero-btn email-btn" href="mailto:kidanifactory@gmail.com">
+                <i class='bx bx-envelope'></i> Email Kidani Now
+            </a>
+        </div>
     </div>
-</section>
-
-<section id="products" class="products">
-    <div class="marquee-heading"><span>Our Products & Prices</span></div>
 </section>
 
 <!-- BOX PROFILE -->
 <section id="gallery" class="gallery">
     <div class="box-heading">BOX PROFILE</div>
     <div class="gallery-grid">
-       <div class="product-card">
-           <ul>
-               <li>Gauge 28 - 500 / Meter</li>
-               <li>Gauge 30 - 440 / Meter</li>
-               <li>Gauge 32 - 400 / Meter</li>
-           </ul>   
-       </div>
-        <div>
-            <img src="images/m1.jfif" alt="Roof 1">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+        <div class="product-card">
+            <ul>
+                <li>Gauge 28 - 500 / Meter</li>
+                <li>Gauge 30 - 440 / Meter</li>
+                <li>Gauge 32 - 400 / Meter</li>
+            </ul>
         </div>
-
         <div>
-            <img src="images/m2.jfif" alt="Roof 2">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <img src="images/m1.jfif">
+            <a class="order-btn">ORDER NOW</a>
+        </div>
+        <div>
+            <img src="images/m2.jfif">
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
@@ -114,21 +171,20 @@
 <section id="images" class="images-section">
     <div class="images-heading">CORRUGATED COLOURED MABATI</div>
     <div class="images-grid">
-       <div class="product-card">
-           <ul>
-               <li>Gauge 28 - 400 / Meter</li>
-               <li>Gauge 30 - 350 / Meter</li>
-               <li>Gauge 32 - 300 / Meter</li>
-           </ul>   
-       </div>
+        <div class="product-card">
+            <ul>
+                <li>Gauge 28 - 400 / Meter</li>
+                <li>Gauge 30 - 350 / Meter</li>
+                <li>Gauge 32 - 300 / Meter</li>
+            </ul>
+        </div>
         <div>
             <img src="conrruagated mabati/c2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="conrruagated mabati/c3.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
@@ -137,21 +193,20 @@
 <section id="images2" class="images-section2">
     <div class="images-heading2">VERSATILE MABATI</div>
     <div class="images-grid">
-       <div class="product-card">
-           <ul>
-               <li>Gauge 28 - 600 / Meter</li>
-               <li>Gauge 30 - 550 / Meter</li>
-               <li>Gauge 32 - 520 / Meter</li>
-           </ul>   
-       </div>
+        <div class="product-card">
+            <ul>
+                <li>Gauge 28 - 600 / Meter</li>
+                <li>Gauge 30 - 550 / Meter</li>
+                <li>Gauge 32 - 520 / Meter</li>
+            </ul>
+        </div>
         <div>
             <img src="versertile mabati/v1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="versertile mabati/v2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
@@ -160,37 +215,35 @@
 <section id="images3" class="images-section3">
     <div class="images-heading3">ROMANTILE MABATI</div>
     <div class="images-grid">
-       <div class="product-card">
-           <ul>
-               <li>Gauge 28 - 650 / Meter</li>
-               <li>Gauge 30 - 600 / Meter</li>
-               <li>Gauge 32 - 520 / Meter</li>
-           </ul>   
-       </div>
+        <div class="product-card">
+            <ul>
+                <li>Gauge 28 - 650 / Meter</li>
+                <li>Gauge 30 - 600 / Meter</li>
+                <li>Gauge 32 - 520 / Meter</li>
+            </ul>
+        </div>
         <div>
             <img src="roman tile/r1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="roman tile/r2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
 
 <!-- RIDGES -->
 <section id="images4" class="images-section4">
-    <div class="images-heading">RIDGES/VALLEYS</div>
+    <div class="images-heading">RIDGES / VALLEYS</div>
     <div class="images-grid">
         <div>
             <img src="riddes/rd1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="riddes/rd2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
@@ -201,12 +254,11 @@
     <div class="images-grid">
         <div>
             <img src="rolltopps/r1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="rolltopps/r2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
     </div>
 </section>
@@ -217,14 +269,12 @@
     <div class="images-grid">
         <div>
             <img src="nails/n1.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div>
             <img src="nails/n2.jfif">
-            <a class="order-btn" href="https://wa.me/254789997208">ORDER NOW</a>
+            <a class="order-btn">ORDER NOW</a>
         </div>
-
         <div class="product-card">
             <h3><i class='bx bx-home'></i> Other Products</h3>
             <ul>
@@ -238,55 +288,28 @@
 
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<div class="floating-message">
-    <div class="message-text">Reach us quickly!</div>
-    <a href="https://wa.me/254789997208" class="message-icon">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
+<!-- FLOATING BUTTONS -->
+<div class="floating-contact">
+    <a href="https://wa.me/254789997208" class="whatsapp"><i class='bx bxl-whatsapp'></i></a>
+    <a href="tel:0789997208" class="call"><i class='bx bx-phone-call'></i></a>
 </div>
 
 <script>
-function toggleSidebar() {
+function toggleSidebar(){
     document.getElementById("sidebar").classList.toggle("open");
     document.getElementById("content").classList.toggle("shift");
 }
 </script>
 
 <!-- FOOTER -->
-<footer style="background:#222; color:white; padding:40px 20px; margin-top:40px;">
-    <div style="max-width:1200px; margin:auto;">
-
-        <h2 style="font-size:26px; font-weight:700; margin-bottom:20px; text-align:center; letter-spacing:1px;">
-            Kidani Mabati
-        </h2>
-
-        <div style="display:flex; flex-direction:column; gap:18px; font-size:18px; text-align:center;">
-
-            <p style="display:flex; justify-content:center; align-items:center; gap:10px;">
-                <i class='bx bx-map' style="font-size:24px; color:#e63946;"></i>
-                Eastern Bypass, Nairobi
-            </p>
-
-            <p style="display:flex; justify-content:center; align-items:center; gap:10px;">
-                <i class='bx bx-phone' style="font-size:24px; color:#e63946;"></i>
-                0789997208
-            </p>
-
-            <p style="display:flex; justify-content:center; align-items:center; gap:10px;">
-                <i class='bx bx-envelope' style="font-size:24px; color:#e63946;"></i>
-                <a href="mailto:kidanifactory@gmail.com" style="color:#e63946; text-decoration:none;">
-                    kidanifactory@gmail.com
-                </a>
-            </p>
-
-        </div>
-
-        <p style="margin-top:25px; text-align:center; opacity:0.7;">
-            &copy; 2025 Kidani Mabati. All Rights Reserved.
-        </p>
-
-    </div>
+<footer style="background:#222;color:white;padding:40px 20px;margin-top:40px;">
+<div style="max-width:1200px;margin:auto;text-align:center;">
+<h2>Kidani Mabati</h2>
+<p><i class='bx bx-map'></i> Eastern Bypass, Nairobi</p>
+<p><i class='bx bx-phone'></i> 0789997208</p>
+<p><i class='bx bx-envelope'></i> kidanifactory@gmail.com</p>
+<p style="opacity:.7;">© 2025 Kidani Mabati. All Rights Reserved.</p>
+</div>
 </footer>
 
 </body>
