@@ -5,16 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kidani Mabati</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link href="style.css" rel='stylesheet'>
+
+<link href="style.css" rel="stylesheet">
 
 <style>
 
-/* ORDER NOW BUTTON – BLACK */
+/* ORDER NOW BUTTON */
 .order-btn {
     display: inline-block;
-    margin: 12px auto 0 auto;
+    margin: 12px auto 0;
     background: #000;
     color: #fff;
     padding: 12px 28px;
@@ -30,7 +34,7 @@
     transform: scale(1.06);
 }
 
-/* ALL SECTION TITLES – WHITE TEXT, BLACK BACKGROUND */
+/* ALL SECTION TITLES (EXCEPT HEADER) */
 .box-heading,
 .images-heading,
 .images-heading2,
@@ -45,6 +49,43 @@
     border-radius: 10px;
     margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* FLOATING CALL & WHATSAPP */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.floating-contact a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    transition: transform 0.25s ease;
+}
+
+.floating-contact a:hover {
+    transform: scale(1.1);
+}
+
+.floating-contact .whatsapp {
+    background: #25D366;
+}
+
+.floating-contact .call {
+    background: #000;
 }
 
 </style>
@@ -201,7 +242,7 @@
     </div>
 </section>
 
-<!-- NAILS -->
+<!-- ROOFING NAILS -->
 <section id="images6" class="images-section6">
     <div class="images-heading3">ROOFING NAILS</div>
     <div class="images-grid">
@@ -219,6 +260,16 @@
     </div>
 </section>
 
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-contact">
+    <a href="https://wa.me/254789997208" class="whatsapp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    <a href="tel:0789997208" class="call">
+        <i class='bx bx-phone-call'></i>
+    </a>
 </div>
 
 <script>
