@@ -15,95 +15,146 @@
 
 <style>
 
-/* ORDER NOW & SHOP NOW BUTTONS */
+/* === GLOBAL MOBILE IMPROVEMENTS === */
+html, body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.45;
+    -webkit-text-size-adjust:100%;
+}
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* BUTTONS */
 .order-btn, .shop-btn{
     display:inline-block;
-    margin:12px 8px 0 0;
+    margin:10px 8px 0 0;
     background:#000;
     color:#fff;
-    padding:12px 28px;
+    padding:12px 24px;
     border-radius:10px;
     font-weight:700;
     text-decoration:none;
-    font-size:17px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.4);
+    font-size:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.35);
     transition:0.25s ease;
+    text-align:center;
 }
 .order-btn:hover, .shop-btn:hover{
     background:#111;
-    transform:scale(1.06);
+    transform:scale(1.05);
 }
 .shop-btn{
     display:inline-flex;
     align-items:center;
     gap:8px;
+    justify-content:center;
 }
 
-/* SECTION TITLES */
+/* SECTION HEADINGS */
 .box-heading,
 .images-heading,
 .images-heading2,
 .images-heading3{
     background:#1f6feb;
     color:#fff;
-    padding:16px 20px;
-    font-size:26px;
+    padding:14px 10px;
+    font-size:22px;
     font-weight:700;
     text-align:center;
-    letter-spacing:2px;
+    letter-spacing:1px;
     border-radius:10px;
-    margin-bottom:25px;
+    margin-bottom:22px;
+    word-wrap:break-word;
 }
 
-/* HERO BUTTONS */
+/* HERO BUTTON GROUP */
 .hero-buttons{
     display:flex;
     justify-content:center;
-    gap:15px;
-    margin-top:25px;
+    gap:12px;
+    margin-top:18px;
     flex-wrap:wrap;
 }
 .hero-btn{
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:14px 24px;
+    padding:12px 20px;
     border-radius:10px;
     font-weight:600;
     text-decoration:none;
     color:#fff;
-    font-size:16px;
+    font-size:15px;
+    text-align:center;
 }
 .whatsapp-btn{background:#25D366;}
 .call-btn{background:#000;}
 .email-btn{background:#1f6feb;}
 
-/* FLOATING BUTTONS */
+/* FLOATING CONTACT BUTTONS */
 .floating-contact{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:16px;
+    right:16px;
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:10px;
     z-index:9999;
 }
 .floating-contact a{
-    width:55px;
-    height:55px;
+    width:50px;
+    height:50px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#fff;
-    font-size:26px;
+    font-size:22px;
     text-decoration:none;
     box-shadow:0 6px 16px rgba(0,0,0,0.4);
 }
 .floating-contact .whatsapp{background:#25D366;}
 .floating-contact .call{background:#000;}
 
+/* === MOBILE RESPONSIVE TUNING === */
+@media(max-width:480px){
+
+    .box-heading,
+    .images-heading,
+    .images-heading2,
+    .images-heading3{
+        font-size:20px;
+        padding:12px;
+    }
+
+    .order-btn, .shop-btn{
+        width:100%;
+        font-size:15px;
+        padding:12px;
+        margin:8px 0;
+    }
+
+    .hero-btn{
+        width:100%;
+        justify-content:center;
+        font-size:15px;
+        padding:12px;
+    }
+
+    .floating-contact a{
+        width:48px;
+        height:48px;
+        font-size:20px;
+    }
+}
+
 </style>
+
 </head>
 
 <body>
@@ -542,5 +593,6 @@ function toggleSidebar(){
 
 </body>
 </htmls
+
 
 
