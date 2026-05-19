@@ -6,10 +6,7 @@
 
 <title>Kidani Mabati</title>
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- BOXICONS -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <style>
@@ -23,22 +20,26 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#ffffff;
-color:#111;
-overflow-x:hidden;
 }
 
 html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+body{
+background:#fff;
+color:#111;
 overflow-x:hidden;
 }
 
 img{
 max-width:100%;
 display:block;
+}
+
+a{
+text-decoration:none;
 }
 
 /* =========================
@@ -50,18 +51,18 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-z-index:9999;
-padding:18px 7%;
+padding:16px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(5,12,30,0.88);
-backdrop-filter:blur(12px);
+background:rgba(5,12,30,0.92);
+backdrop-filter:blur(10px);
+z-index:9999;
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-font-size:30px;
+font-size:28px;
 font-weight:800;
 color:#fff;
 }
@@ -72,35 +73,19 @@ color:#ff2b2b;
 
 nav{
 display:flex;
-gap:35px;
+gap:25px;
+flex-wrap:wrap;
 }
 
 nav a{
-text-decoration:none;
 color:#fff;
 font-size:15px;
 font-weight:500;
 transition:0.3s;
-position:relative;
 }
 
 nav a:hover{
 color:#ff2b2b;
-}
-
-nav a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0;
-height:2px;
-background:#ff2b2b;
-transition:0.3s;
-}
-
-nav a:hover::after{
-width:100%;
 }
 
 /* =========================
@@ -112,7 +97,7 @@ position:relative;
 min-height:100vh;
 display:flex;
 align-items:center;
-padding:120px 7% 90px;
+padding:120px 5% 80px;
 overflow:hidden;
 }
 
@@ -123,46 +108,34 @@ inset:0;
 background:
 linear-gradient(to right,
 rgba(2,10,30,0.96) 15%,
-rgba(2,10,30,0.92) 40%,
-rgba(2,10,30,0.70) 65%,
-rgba(2,10,30,0.35) 100%),
-url('simba 1.jfif') center center/cover no-repeat;
-z-index:-2;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-left:0;
-right:0;
-bottom:0;
-height:120px;
-background:linear-gradient(to top,#ffffff,transparent);
+rgba(2,10,30,0.85) 50%,
+rgba(2,10,30,0.55) 100%),
+url('simba 1.jfif') center/cover no-repeat;
 z-index:-1;
 }
 
 .hero-content{
-max-width:760px;
+max-width:700px;
+width:100%;
 }
 
 .hero-badge{
 display:inline-block;
 background:#0f46d8;
-padding:10px 20px;
-border-radius:40px;
-font-size:13px;
-font-weight:700;
 color:#fff;
-margin-bottom:28px;
-letter-spacing:0.4px;
+padding:10px 18px;
+border-radius:40px;
+font-size:12px;
+font-weight:700;
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:76px;
-line-height:1.03;
-font-weight:800;
+font-size:70px;
+line-height:1.1;
 color:#fff;
-margin-bottom:28px;
+margin-bottom:25px;
+font-weight:800;
 }
 
 .hero h1 span{
@@ -171,11 +144,10 @@ color:#ff2b2b;
 }
 
 .hero p{
-font-size:22px;
-line-height:1.8;
-color:#ececec;
-max-width:720px;
-margin-bottom:42px;
+font-size:20px;
+line-height:1.9;
+color:#f0f0f0;
+margin-bottom:35px;
 }
 
 /* =========================
@@ -184,25 +156,24 @@ BUTTONS
 
 .hero-buttons{
 display:flex;
-gap:18px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .hero-btn{
+padding:18px 28px;
+border-radius:16px;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:12px;
-padding:20px 34px;
-border-radius:18px;
-text-decoration:none;
-font-size:20px;
+gap:10px;
+font-size:18px;
 font-weight:600;
 transition:0.3s;
 }
 
 .hero-btn i{
-font-size:28px;
+font-size:24px;
 }
 
 .whatsapp-btn{
@@ -211,39 +182,14 @@ color:#fff;
 }
 
 .call-btn{
-border:2px solid rgba(255,255,255,0.22);
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+border:2px solid rgba(255,255,255,0.2);
 color:#fff;
+backdrop-filter:blur(10px);
 }
 
 .hero-btn:hover{
 transform:translateY(-3px);
-}
-
-/* =========================
-SECTION
-========================= */
-
-section{
-padding:90px 7%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
-
-.section-title h2{
-font-size:50px;
-font-weight:800;
-color:#08101f;
-margin-bottom:15px;
-}
-
-.section-title p{
-font-size:18px;
-color:#666;
 }
 
 /* =========================
@@ -252,37 +198,56 @@ STATS
 
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:0 7%;
-margin-top:-60px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:0 5%;
+margin-top:-50px;
 position:relative;
-z-index:10;
+z-index:20;
 }
 
 .stat-card{
 background:#fff;
-padding:40px 30px;
-border-radius:26px;
-box-shadow:0 12px 40px rgba(0,0,0,0.08);
+padding:35px 20px;
+border-radius:22px;
 text-align:center;
-transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 border:1px solid #eee;
 }
 
-.stat-card:hover{
-transform:translateY(-5px);
-}
-
 .stat-card h2{
-font-size:46px;
-font-weight:800;
+font-size:42px;
 color:#ff2b2b;
 margin-bottom:10px;
 }
 
 .stat-card p{
-font-size:17px;
+font-size:16px;
+color:#666;
+}
+
+/* =========================
+SECTION
+========================= */
+
+section{
+padding:80px 5%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:48px;
+font-weight:800;
+margin-bottom:12px;
+color:#08101f;
+}
+
+.section-title p{
+font-size:18px;
 color:#666;
 }
 
@@ -292,17 +257,17 @@ PRODUCTS
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-gap:32px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
 }
 
 .card{
 background:#fff;
-border-radius:26px;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 12px 35px rgba(0,0,0,0.08);
-border:1px solid #ececec;
-transition:0.35s;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+border:1px solid #eee;
+transition:0.3s;
 }
 
 .card:hover{
@@ -311,7 +276,7 @@ transform:translateY(-6px);
 
 .card img{
 width:100%;
-height:250px;
+height:240px;
 object-fit:cover;
 }
 
@@ -320,71 +285,61 @@ padding:22px;
 }
 
 .card h3{
-font-size:22px;
-font-weight:700;
-color:#08101f;
+font-size:24px;
 margin-bottom:12px;
+color:#08101f;
 }
 
 .card p{
-font-size:16px;
-line-height:1.7;
+font-size:15px;
+line-height:1.8;
 color:#666;
 margin-bottom:18px;
 }
-
-/* TAGS */
 
 .product-tags{
 display:flex;
 flex-wrap:wrap;
 gap:10px;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .product-tags span{
-padding:10px 16px;
+padding:8px 14px;
+background:#f2f5fb;
+border:1px solid #dbe4f3;
 border-radius:30px;
-background:#f3f6fb;
-border:2px solid #dbe4f3;
-font-size:14px;
-font-weight:500;
-color:#7b8ba3;
+font-size:13px;
+color:#6b7280;
 }
-
-/* PRICE */
 
 .price{
 font-size:20px;
 font-weight:800;
+margin-bottom:22px;
 color:#08101f;
-margin-bottom:24px;
+line-height:1.7;
 }
-
-/* ORDER BUTTON */
 
 .full-order-btn{
 width:100%;
 height:56px;
-border-radius:18px;
 background:#eb2027;
+border-radius:16px;
 display:flex;
 align-items:center;
 justify-content:center;
 gap:10px;
-text-decoration:none;
-color:#fff;
-font-size:20px;
+font-size:18px;
 font-weight:700;
+color:#fff;
 margin-bottom:14px;
 transition:0.3s;
 }
 
 .full-order-btn:hover{
-background:#d6161d;
+background:#d7181f;
 }
-
-/* BOTTOM BUTTONS */
 
 .bottom-buttons{
 display:flex;
@@ -395,31 +350,25 @@ gap:12px;
 .call-card-btn{
 flex:1;
 height:52px;
-border-radius:18px;
+border-radius:16px;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:10px;
-text-decoration:none;
-font-size:17px;
+gap:8px;
+font-size:16px;
 font-weight:600;
 transition:0.3s;
 }
 
 .details-btn{
-background:#fff;
-border:4px solid #1d3ea6;
+border:3px solid #1d3ea6;
 color:#1d3ea6;
+background:#fff;
 }
 
 .call-card-btn{
 background:#1d3ea6;
 color:#fff;
-}
-
-.details-btn:hover,
-.call-card-btn:hover{
-transform:translateY(-2px);
 }
 
 /* =========================
@@ -429,58 +378,56 @@ ABOUT
 .about{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:55px;
+gap:40px;
 align-items:center;
 }
 
 .about img{
 width:100%;
-height:480px;
+height:450px;
 object-fit:cover;
-border-radius:28px;
+border-radius:24px;
 }
 
 .about-content h2{
-font-size:52px;
-line-height:1.2;
-margin-bottom:25px;
+font-size:48px;
+margin-bottom:20px;
 color:#08101f;
 }
 
 .about-content p{
-font-size:18px;
-line-height:2;
+font-size:17px;
+line-height:1.9;
 color:#555;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 /* =========================
-CONTACT STRIP
+CONTACT
 ========================= */
 
 .contact-strip{
 background:linear-gradient(90deg,#0f46d8,#08101f);
-padding:60px 7%;
+padding:60px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:30px;
+gap:25px;
 flex-wrap:wrap;
 }
 
 .contact-strip h2{
-font-size:42px;
-line-height:1.4;
+font-size:38px;
 color:#fff;
-max-width:700px;
+line-height:1.5;
+max-width:650px;
 }
 
 .contact-strip a{
 background:#25D366;
-color:#fff;
-text-decoration:none;
-padding:18px 32px;
+padding:16px 28px;
 border-radius:14px;
+color:#fff;
 font-size:18px;
 font-weight:600;
 }
@@ -491,13 +438,13 @@ FOOTER
 
 footer{
 background:#08101f;
-padding:80px 7%;
+padding:70px 5%;
 }
 
 .footer-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:45px;
+gap:40px;
 }
 
 .footer-logo{
@@ -513,12 +460,12 @@ color:#ff2b2b;
 
 footer h3{
 font-size:22px;
+margin-bottom:18px;
 color:#fff;
-margin-bottom:20px;
 }
 
 footer p{
-color:#cfcfcf;
+color:#d1d5db;
 line-height:2;
 margin-bottom:10px;
 }
@@ -530,13 +477,7 @@ gap:12px;
 }
 
 .footer-links a{
-text-decoration:none;
-color:#cfcfcf;
-transition:0.3s;
-}
-
-.footer-links a:hover{
-color:#ff2b2b;
+color:#d1d5db;
 }
 
 /* =========================
@@ -545,30 +486,24 @@ FLOATING BUTTONS
 
 .floating-contact{
 position:fixed;
-right:22px;
-bottom:22px;
+right:18px;
+bottom:18px;
 display:flex;
 flex-direction:column;
-gap:14px;
+gap:12px;
 z-index:999;
 }
 
 .floating-contact a{
-width:65px;
-height:65px;
+width:60px;
+height:60px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-decoration:none;
-font-size:30px;
+font-size:28px;
 color:#fff;
-box-shadow:0 12px 30px rgba(0,0,0,0.25);
-transition:0.3s;
-}
-
-.floating-contact a:hover{
-transform:scale(1.08);
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
 }
 
 .whatsapp{
@@ -585,115 +520,47 @@ CHAT BOX
 
 .chat-box{
 position:fixed;
-right:22px;
-bottom:110px;
+right:18px;
+bottom:95px;
 background:#fff;
-padding:18px;
-width:260px;
+padding:16px;
+width:240px;
 border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
 z-index:998;
-}
-
-.chat-box b{
-font-size:18px;
-display:block;
-margin-bottom:5px;
-color:#08101f;
-}
-
-.chat-box small{
-color:#555;
-line-height:1.6;
 }
 
 /* =========================
 MOBILE
 ========================= */
 
-@media(max-width:992px){
-
-.hero h1{
-font-size:58px;
-}
-
-.hero p{
-font-size:19px;
-}
-
-.section-title h2{
-font-size:42px;
-}
-
-.about-content h2{
-font-size:42px;
-}
-
-.contact-strip h2{
-font-size:34px;
-}
-
-}
-
 @media(max-width:768px){
 
 header{
-padding:18px 5%;
-}
-
-nav{
-gap:18px;
-}
-
-nav a{
-font-size:14px;
+flex-direction:column;
+gap:12px;
 }
 
 .hero{
-padding:120px 5% 80px;
+padding:160px 4% 70px;
+text-align:center;
 }
 
 .hero h1{
-font-size:44px;
+font-size:42px;
 }
 
 .hero p{
-font-size:17px;
-line-height:1.8;
+font-size:16px;
+}
+
+.hero-buttons{
+justify-content:center;
 }
 
 .hero-btn{
-padding:16px 24px;
-font-size:17px;
-}
-
-.hero-btn i{
-font-size:24px;
-}
-
-.stats{
-padding:0 5%;
-margin-top:-40px;
-}
-
-section{
-padding:80px 5%;
-}
-
-.section-title h2{
-font-size:34px;
-}
-
-.about-content h2{
-font-size:34px;
-}
-
-.contact-strip{
-padding:50px 5%;
-}
-
-.contact-strip h2{
-font-size:28px;
+width:100%;
+max-width:320px;
 }
 
 .products{
@@ -704,8 +571,46 @@ grid-template-columns:1fr;
 flex-direction:column;
 }
 
+.about{
+grid-template-columns:1fr;
+}
+
+.about-content{
+text-align:center;
+}
+
+.contact-strip{
+text-align:center;
+justify-content:center;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
 .chat-box{
 display:none;
+}
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:34px;
+}
+
+.section-title h2{
+font-size:28px;
+}
+
+.about-content h2{
+font-size:30px;
 }
 
 }
@@ -746,9 +651,8 @@ Premium Roofing Sheets
 </h1>
 
 <p>
-Durable, affordable mabati for stronger, better homes.
-From corrugated to romantile, order now and get fast
-delivery across Kenya.
+Durable, affordable mabati for stronger and modern homes.
+Order quality roofing sheets with fast delivery across Kenya.
 </p>
 
 <div class="hero-buttons">
@@ -779,12 +683,12 @@ Call Now
 <div class="stats">
 
 <div class="stat-card">
-<h2 id="clients">0</h2>
+<h2>3467+</h2>
 <p>Happy Clients</p>
 </div>
 
 <div class="stat-card">
-<h2 id="productsCount">0</h2>
+<h2>21501+</h2>
 <p>Products Sold</p>
 </div>
 
@@ -800,7 +704,7 @@ Call Now
 
 <div class="section-title">
 <h2>Premium Roofing Products</h2>
-<p>Strong, modern and durable roofing solutions</p>
+<p>Modern, durable and affordable roofing solutions</p>
 </div>
 
 <div class="products">
@@ -815,8 +719,8 @@ Call Now
 <h3>Corrugated Mabati</h3>
 
 <p>
-Classic wave-profile roofing sheets trusted across Kenya
-for durability and affordability.
+Classic wave-profile roofing sheets trusted across Kenya.
+Strong, affordable and durable.
 </p>
 
 <div class="product-tags">
@@ -831,8 +735,7 @@ KSh 350/meter
 </div>
 
 <a class="full-order-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20want%20to%20order%20Corrugated%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Order%20Corrugated%20Mabati">
 
 <i class='bx bx-shopping-bag'></i>
 Order Now
@@ -842,8 +745,7 @@ Order Now
 <div class="bottom-buttons">
 
 <a class="details-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20need%20more%20details%20about%20Corrugated%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Need%20details%20about%20Corrugated%20Mabati">
 
 <i class='bx bx-show'></i>
 View Details
@@ -873,23 +775,23 @@ Call
 <h3>Ordinary Mabati</h3>
 
 <p>
-Affordable galvanized roofing sheets perfect for
-budget-conscious projects without compromising quality.
+Affordable galvanized roofing sheets suitable for
+budget-conscious projects.
 </p>
 
 <div class="product-tags">
+<span>Gauge 28</span>
 <span>Gauge 30</span>
-<span>Gauge 32</span>
 <span>Galvanized</span>
 </div>
 
 <div class="price">
-KSh 300/meter
+Gauge 28 — KSh 359/meter<br>
+Gauge 30 — KSh 300/meter
 </div>
 
 <a class="full-order-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20want%20to%20order%20Ordinary%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Order%20Ordinary%20Mabati">
 
 <i class='bx bx-shopping-bag'></i>
 Order Now
@@ -899,8 +801,7 @@ Order Now
 <div class="bottom-buttons">
 
 <a class="details-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20need%20more%20details%20about%20Ordinary%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Need%20details%20about%20Ordinary%20Mabati">
 
 <i class='bx bx-show'></i>
 View Details
@@ -930,8 +831,8 @@ Call
 <h3>Box Profile Mabati</h3>
 
 <p>
-Modern box profile roofing sheets ideal for residential
-and commercial projects.
+Modern roofing sheets ideal for residential and
+commercial buildings.
 </p>
 
 <div class="product-tags">
@@ -942,12 +843,11 @@ and commercial projects.
 </div>
 
 <div class="price">
-KSh 420/meter
+KSh 450/meter
 </div>
 
 <a class="full-order-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20want%20to%20order%20Box%20Profile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Order%20Box%20Profile%20Mabati">
 
 <i class='bx bx-shopping-bag'></i>
 Order Now
@@ -957,8 +857,7 @@ Order Now
 <div class="bottom-buttons">
 
 <a class="details-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20need%20more%20details%20about%20Box%20Profile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Need%20details%20about%20Box%20Profile%20Mabati">
 
 <i class='bx bx-show'></i>
 View Details
@@ -989,7 +888,7 @@ Call
 
 <p>
 Premium versatile roofing sheets designed for elegant
-modern homes and long-lasting durability.
+modern homes.
 </p>
 
 <div class="product-tags">
@@ -1004,8 +903,7 @@ KSh 580/meter
 </div>
 
 <a class="full-order-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20want%20to%20order%20Versatile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Order%20Versatile%20Mabati">
 
 <i class='bx bx-shopping-bag'></i>
 Order Now
@@ -1015,8 +913,7 @@ Order Now
 <div class="bottom-buttons">
 
 <a class="details-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20need%20more%20details%20about%20Versatile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Need%20details%20about%20Versatile%20Mabati">
 
 <i class='bx bx-show'></i>
 View Details
@@ -1046,8 +943,8 @@ Call
 <h3>Romantile Mabati</h3>
 
 <p>
-Elegant tile-like roofing sheets that give homes a modern
-premium appearance.
+Elegant tile-like roofing sheets that give homes
+a modern premium appearance with long-lasting durability.
 </p>
 
 <div class="product-tags">
@@ -1062,8 +959,7 @@ KSh 650/meter
 </div>
 
 <a class="full-order-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20want%20to%20order%20Romantile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Order%20Romantile%20Mabati">
 
 <i class='bx bx-shopping-bag'></i>
 Order Now
@@ -1073,8 +969,7 @@ Order Now
 <div class="bottom-buttons">
 
 <a class="details-btn"
-href="https://wa.me/254787762284?text=Hello%20Kidani%20Mabati,%20I%20need%20more%20details%20about%20Romantile%20Mabati"
-target="_blank">
+href="https://wa.me/254787762284?text=Need%20details%20about%20Romantile%20Mabati">
 
 <i class='bx bx-show'></i>
 View Details
@@ -1092,7 +987,6 @@ Call
 </div>
 
 </div>
-
 </div>
 
 </div>
@@ -1113,26 +1007,14 @@ Built For Modern Kenyan Homes
 </h2>
 
 <p>
-Kidani Mabati supplies premium roofing sheets trusted by homeowners,
-contractors and developers across Kenya.
+Kidani Mabati supplies premium roofing sheets trusted by
+homeowners and contractors across Kenya.
 </p>
 
 <p>
-We provide affordable, durable and stylish roofing products designed
-to withstand harsh weather conditions while maintaining a modern look.
+We provide durable and stylish roofing products designed
+for long-lasting performance.
 </p>
-
-<div class="hero-buttons">
-
-<a class="hero-btn whatsapp-btn"
-href="https://wa.me/254787762284">
-
-<i class='bx bxl-whatsapp'></i>
-Get Quote
-
-</a>
-
-</div>
 
 </div>
 
@@ -1165,8 +1047,8 @@ Kidani <span>Mabati</span>
 </div>
 
 <p>
-Premium roofing solutions built for strength,
-beauty and durability.
+Premium roofing solutions built for durability,
+strength and modern homes.
 </p>
 
 </div>
@@ -1228,41 +1110,6 @@ Chat with us on WhatsApp now.
 </small>
 
 </div>
-
-<script>
-
-/* COUNTER ANIMATION */
-
-function animate(id,target){
-
-let el=document.getElementById(id);
-
-let count=0;
-
-let step=target/50;
-
-let interval=setInterval(()=>{
-
-count+=step;
-
-if(count>=target){
-
-count=target;
-
-clearInterval(interval);
-
-}
-
-el.innerText=Math.floor(count)+"+";
-
-},40);
-
-}
-
-animate("clients",500);
-animate("productsCount",1200);
-
-</script>
 
 </body>
 </html>
